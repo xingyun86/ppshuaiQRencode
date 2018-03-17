@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="QrenCode" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/QrenCode" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/QrenCode" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DHAVE_LIBPTHREAD=1" />
+			<Add directory="libz-mingw/include" />
+			<Add directory="libpng-mingw/include" />
+			<Add directory="libqrencode-mingw/include" />
+		</Compiler>
+		<Linker>
+			<Add option="-static" />
+			<Add library="png" />
+			<Add library="gdi32" />
+			<Add library="png16" />
+			<Add library="z" />
+			<Add library="user32" />
+			<Add library="pthread" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+			<Add library="qrencode" />
+			<Add directory="libz-mingw" />
+			<Add directory="libpng-mingw/lib" />
+			<Add directory="libqrencode-mingw/lib" />
+		</Linker>
+		<Unit filename="QrenCode.cpp" />
+		<Unit filename="QrenCode.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="Resource.h" />
+		<Unit filename="manifest.xml" />
+		<Unit filename="qrenc.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

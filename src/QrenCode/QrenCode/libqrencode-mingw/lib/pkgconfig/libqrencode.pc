@@ -1,0 +1,11 @@
+prefix=/d/DevelopmentEnvironment/Workspaces/Sources/qrencode-4.0.0/qrencode-4.0.0/output
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: libqrencode
+Description: A QR Code encoding library
+Version: 4.0.0
+Libs: -L${libdir} -lqrencode
+Libs.private: -lpthread
+Cflags: -I${includedir}
